@@ -44,7 +44,6 @@ def split_odd_even(head):
 
     return odd_head, even_head
 
-# --- Main Program ---
 n = int(input())
 arr = list(map(int, input().split()))
 
