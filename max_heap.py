@@ -3,12 +3,12 @@ import sys
 
 def heapify(arr, n, i):
     largest = i
-    l = 2 * i + 1
-    r = 2 * i + 2
-    if l < n and arr[i] < arr[l]:
-        largest = l
-    if r < n and arr[largest] < arr[r]:
-        largest = r
+    left_child = 2 * i + 1
+    right_child = 2 * i + 2
+    if left_child < n and arr[i] < arr[left_child]:
+        largest = left_child
+    if right_child < n and arr[largest] < arr[right_child]:
+        largest = right_child
     if largest != i:
         arr[i], arr[largest] = arr[largest], arr[i]
         heapify(arr, n, largest)
